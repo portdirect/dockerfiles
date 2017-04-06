@@ -81,8 +81,8 @@ sudo docker run \
     --volume=/etc/kubernetes:/etc/kubernetes:rw \
     --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro \
     --volume=/var/run/docker.sock:/run/docker.sock \
-    --env KUBELET_CONTAINER=docker.io/port/kubeadm-aio:latest \
-    docker.io/port/kubeadm-aio:latest
+    --env KUBELET_CONTAINER=docker.io/port/kubeadm-aio:pinned \
+    docker.io/port/kubeadm-aio:pinned
 ```
 
 ### Logs
