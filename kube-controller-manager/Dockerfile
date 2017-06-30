@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-ARG KUBERNETES_VERSION=v1.6.5
+ARG KUBERNETES_VERSION=v1.7.0
 
 ENV DEBIAN_FRONTEND=noninteractive \
     container=docker \
@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 RUN set -x \
     && apt-get update \
-    && apt-get install -y \
+    && apt-get install -y --no-install-recommends \
         ceph-common \
         curl \
     && curl -L ${KUBERNETES_DOWNLOAD_ROOT}/${KUBERNETES_COMPONENT} -o /usr/bin/${KUBERNETES_COMPONENT} \
